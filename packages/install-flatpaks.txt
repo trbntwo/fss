@@ -1,0 +1,15 @@
+com.mattjakeman.ExtensionManager
+ca.desrt.dconf-editor
+org.gtk.Gtk3theme.adw-gtk3-dark
+org.gtk.Gtk3theme.adw-gtk3
+com.github.GradienceTeam.Gradience
+com.nextcloud.desktopclient.nextcloud
+com.spotify.Client
+com.discordapp.Discord
+org.mozilla.Thunderbird
+com.github.flxzt.rnote
+com.gitlab.newsflash
+org.filezillaproject.Filezilla
+me.iepure.devtoolbox
+org.raspberrypi.rpi-imager
+com.github.finefindus.eyedropper
