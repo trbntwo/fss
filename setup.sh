@@ -1,12 +1,13 @@
 #!/usr/bin/bash
 
-# DNF Config
-dnfconf="/etc/dnf/dnf.conf"
-echo "changing package manager configuration"
-echo "adding:"
-echo "max_parallel_downloads=6" | sudo tee -a $dnfconf
-echo "defaultyes=True" | sudo tee -a $dnfconf
-echo "package manager configuration customized"
+packagemanger(){
+    dnfconf="/etc/dnf/dnf.conf"
+    echo "changing package manager configuration"
+    echo "adding:"
+    echo "max_parallel_downloads=6" | sudo tee -a $dnfconf
+    echo "defaultyes=True" | sudo tee -a $dnfconf
+    echo "package manager configuration customized"
+}
 
 rpmfusion(){
     echo "adding rpmfusion"
@@ -17,7 +18,7 @@ rpmfusion(){
 
 codecs(){
     if [[ ! -f "/etc/yum.repos.d/rpmfusion-free.repo" && ! -f "/etc/yum.repos.d/rpmfusion-nonfree.repo" ]]; then
-        echo "rpmfusion is not installed. rpmfusion is required for additional codecs"
+        echo "rpmfusion is not installed, rpmfusion is required for additional codecs"
         rpmfusion
     fi
     echo "adding addional multimedia codecs"
@@ -95,8 +96,10 @@ nvidia(){
     echo "nvidia drivers installed"
 }
 
-while getopts "rmpfdvn" option; do
+while getopts "crmpfdvn" option; do
     case $option in
+        c)  packagemanger
+            ;;
         r)  rpmfusion
             ;;
         m)  codecs
@@ -114,3 +117,7 @@ while getopts "rmpfdvn" option; do
     esac
 done
 
+echo
+echo
+echo "script finished"
+echo
