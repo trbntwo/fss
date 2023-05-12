@@ -26,7 +26,6 @@ and reboot when it is done.
 If a system has just been set up, there are often up to 1GB of updates available, these should be installed in any case, as kernel updates are also often included. These in particular are indispensable when installing the nvidia drivers, but updates are also a good idea in general.
 
 ## Options
-
 | Parameter | Description | already implemented |
 |-----------|------|---------------------|
 | `-r`      | enable RPM Fusion, this is a prerequisite for installing additional codecs and the NVIDIA drivers, should be the first option | &check; |
