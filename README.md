@@ -28,7 +28,8 @@ If a system has just been set up, there are often up to 1GB of updates available
 ## Options
 | Parameter | Description | already implemented |
 |-----------|------|---------------------|
-| `-r`      | enable RPM Fusion, this is a prerequisite for installing additional codecs and the NVIDIA drivers, should be the first option | &check; |
+| `-c`       | change settings to speed up DNF, and enable yes as default option, should be first so that other operations in the script benefit from it | &check; |
+| `-r`      | enable RPM Fusion, this is a prerequisite for installing additional codecs and the NVIDIA drivers | &check; |
 | `-m`      | installs additional codecs, requires RPM Fusion, if RPM Fusion is not selected it will still be enabled to install the codecs | &check; |
 | `-p`      | installs packages specified in `./packages/install-packages.txt`, default packages are the ones I would install, to change the selection just edit the `install-packages.txt` after cloning the repository, if you don't want to install any packages just clear the list, do NOT delete it, this will also removes packages specified in `./packages/remove-packages.txt`, default selection are the one I would remove, to change this just do the same as for the packages to be installed | &check; |
 | `-f`      | enables Flathub, and installs Flatpaks specified in `./packages/install-flatpaks.txt`default Flatpaks are the ones I would install, to change the selection just edit the `install-flatpaks.txt` after cloning the repository, if you don't want to install any Flatpaks just clear the list, do NOT delete it | &check; |
