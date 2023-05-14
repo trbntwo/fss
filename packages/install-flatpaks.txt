@@ -1,7 +1,5 @@
 com.mattjakeman.ExtensionManager
 ca.desrt.dconf-editor
-org.gtk.Gtk3theme.adw-gtk3-dark
-org.gtk.Gtk3theme.adw-gtk3
 com.github.GradienceTeam.Gradience
 com.nextcloud.desktopclient.nextcloud
 com.spotify.Client
