@@ -96,7 +96,7 @@ nvidia(){
     echo "NVIDIA drivers installed"
 }
 
-while getopts "crmpfdvn" option; do
+while getopts "crmpfdvnst" option; do
     case $option in
         c)  packagemanger
             ;;
@@ -114,6 +114,9 @@ while getopts "crmpfdvn" option; do
             ;;
         n)  nvidia
             ;;
+        s)  source ./scripts/settings.sh
+            ;;
+        t)  source ./scripts/polishing.sh
     esac
 done
 
