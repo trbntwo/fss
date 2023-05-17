@@ -1,3 +1,5 @@
+gnome-classic-session
 libreoffice*
 gnome-tour
+gnome-photos
 gnome-boxes
