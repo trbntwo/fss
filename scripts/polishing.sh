@@ -7,6 +7,9 @@ install-themes(){
     git clone https://github.com/rafaelmardojai/firefox-gnome-theme
     # MoreWaita
     git clone https://github.com/somepaulo/MoreWaita.git
+    if [[ ! -d "~/.local/share/icons" ]] then
+        mkdir ~/.local/share/icons
+    fi
     cp -r MoreWaita/ ~/.local/share/icons/
     # Capitaine-cursors
     sudo dnf install -y la-capitaine-cursor-theme
@@ -25,7 +28,7 @@ set-themes(){
     # MoreWaita
     gsettings set org.gnome.desktop.interface icon-theme 'MoreWaita'
     # Capitaine-cursors
-    gsettings set org.gnome.desktop.interface cursor-theme 'capitaine-cursor'
+    gsettings set org.gnome.desktop.interface cursor-theme 'capitaine-cursors'
 }
 
 echo "Installing and setting themes for a polished GNOME experience."
