@@ -10,7 +10,7 @@ date-and-time(){
 windows(){
     echo "Configuring title bars and windows"
     gsettings set org.gnome.desktop.wm.preferences button-layout ':minimize,maximize,close'
-    gsettings set org.gnome.desktop.wm.preferences action-double-click-titlebar 'none'
+    gsettings set org.gnome.desktop.wm.preferences action-double-click-titlebar 'toggle-maximize'
     gsettings set org.gnome.desktop.wm.preferences action-middle-click-titlebar 'none'
     gsettings set org.gnome.desktop.wm.preferences action-right-click-titlebar 'none'
     gsettings set org.gnome.mutter center-new-windows true
