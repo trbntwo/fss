@@ -7,7 +7,7 @@ install-themes(){
     git clone https://github.com/rafaelmardojai/firefox-gnome-theme
     # MoreWaita
     git clone https://github.com/somepaulo/MoreWaita.git
-    if [[ ! -d "~/.local/share/icons" ]] then
+    if [[ ! -d "~/.local/share/icons" ]]; then
         mkdir ~/.local/share/icons
     fi
     cp -r MoreWaita/ ~/.local/share/icons/
