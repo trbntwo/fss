@@ -17,13 +17,6 @@ windows(){
     echo "Title bars and windows configured"
 }
 
-search(){
-    echo "Configuring search"
-    gsettings set org.gnome.desktop.search-providers disabled ['org.gnome.Weather.desktop']
-    gsettings set org.gnome.desktop.search-providers sort-order ['org.gnome.Documents.desktop', 'org.gnome.Terminal.desktop', 'org.gnome.Nautilus.desktop', 'org.gnome.Calendar.desktop', 'org.gnome.Contacts.desktop', 'org.gnome.Calculator.desktop', 'org.gnome.clocks.desktop', 'org.gnome.Settings.desktop', 'org.gnome.Software.desktop', 'org.gnome.Characters.desktop', 'firefox.desktop', 'org.gnome.Weather.desktop']
-    echo "Search configured"
-}
-
 file-history(){
     echo "Configuring file history"
     gsettings set org.gnome.desktop.privacy remember-recent-files false
@@ -55,8 +48,8 @@ mouse-and-touchpad(){
 
 nautilus(){
     echo "Setting sort directories first"
-    gsettings set org.gtk.settings.file-chooser sort-directories-first true
-    gsettings set org.gtk.gtk4.settings.file-chooser sort-directories-first true
+    gsettings set org.gtk.Settings.FileChooser sort-directories-first true
+    gsettings set org.gtk.gtk4.Settings.FileChooser sort-directories-first true
     echo "Directories are now first"
 }
 
@@ -64,7 +57,6 @@ echo "Changing settings"
 
 date-and-time
 windows
-search
 file-history
 sound
 power
